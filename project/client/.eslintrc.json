@@ -5,8 +5,8 @@
     }
   },
   "root": true,
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["html", "prettier", "react-hooks", "@babel"],
+  "extends": ["airbnb"],
+  "plugins": ["html", "react-hooks", "@babel"],
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
@@ -95,7 +95,7 @@
       }
     ],
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "trailingComma": "es5",
         "singleQuote": true,
