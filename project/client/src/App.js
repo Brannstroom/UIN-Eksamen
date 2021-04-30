@@ -7,6 +7,8 @@ import Om from './components/Om';
 import Galleri from './components/Galleri';
 import NavBar from './components/NavBar';
 
+import './styles/all.scss';
+
 /**
  * Importerer Routes her da den "styrer" hele applikasjonen
  * Hvis du bruker Styled Components kan du også beholde Theme her (se inne i /styles/Theme.js)
@@ -14,17 +16,19 @@ import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Switch>
-        <Route component={Hjem} path="/" exact />
-        <Route component={Nyheter} path="/nyheter" />
-        <Route component={Artikkel} path="/artikkel/:slug" />
-        <Route component={Kontakt} path="/kontakt" />
-        <Route component={Om} path="/om" />
-        <Route component={Galleri} path="/galleri" />
-      </Switch>
-    </BrowserRouter>
+    <main>
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route component={Hjem} path="/" exact />
+          <Route component={Nyheter} path="/nyheter" />
+          <Route component={Artikkel} path="/artikkel/:slug" />
+          <Route component={Kontakt} path="/kontakt" />
+          <Route component={Om} path="/om" />
+          <Route component={Galleri} path="/galleri" />
+        </Switch>
+      </BrowserRouter>
+    </main>
   );
 }
 

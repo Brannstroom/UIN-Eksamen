@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Roboto&family=Source+Sans+Pro&display=swap');
+
+// Game UIN farger
+$farge1: #222831;
+$farge2: #393e46;
+$farge3: #00adb5;
+$farge4: #eeeeee;
+$farge5: #fed049;
+$farge6: #810034;
+
+body {
+    margin: 0;
+    font-family: 'Lato', 'Roboto', 'Source Sans Pro', sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: $farge1;
+}
+
+main {
+    margin: 0 auto;
+    width: 70%;
+    background-color: $farge4;
+}
+
+header {
+    border-bottom: 3px solid $farge1;
+    height: 60px;
+}
+
+header img {
+    float: left;
+}
+
+nav {}
+
+nav>* {
+    font-size: 30px;
+    margin: 40px;
+}
