@@ -5,8 +5,8 @@
     }
   },
   "root": true,
-  "extends": ["airbnb"],
-  "plugins": ["html", "react-hooks", "@babel"],
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["html", "prettier", "react-hooks", "@babel"],
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
@@ -25,7 +25,7 @@
       "WithStatement"
     ],
     "no-unused-vars": [
-      "error",
+      "warn",
       {
         "vars": "all",
         "args": "after-used",
