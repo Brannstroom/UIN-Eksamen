@@ -8,7 +8,7 @@ export default function Posts() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"][0...6]{
         title,
         slug,
         'author': author->name,
