@@ -6,6 +6,7 @@ import Kontakt from './pages/Kontakt';
 import Omoss from './pages/Omoss';
 import Galleri from './pages/Galleri';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 /**
  * Importerer Routes her da den "styrer" hele applikasjonen
@@ -26,6 +27,7 @@ function App() {
           <Route component={Galleri} path="/galleri" />
         </Switch>
       </BrowserRouter>
+      <Footer />
     </main>
   );
 }
