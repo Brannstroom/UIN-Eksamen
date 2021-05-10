@@ -1,7 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './Global';
 
-// Her må du legge til egne verdier
 const theme = {
   variable: 'value',
 };
