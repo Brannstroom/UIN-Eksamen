@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import sanityClient from '../client.js';
+import Post from './Post';
 
-export default function AllPosts() {
+export default function Posts() {
   const [allPostsData, setAllPosts] = useState(null);
 
   useEffect(() => {
@@ -26,15 +26,14 @@ export default function AllPosts() {
   return (
     <div>
       {allPostsData &&
-        allPostsData.map((post, index) => (
-          <Link to={`/${post.slug.current}`} key={post.slug.current}>
-            <span key={index}>
-              <img src={post.mainImage.asset.url} alt="" />
-              <span>
-                <h2>{post.title}</h2>
-              </span>
-            </span>
-          </Link>
+        allPostsData.map((post) => (
+          <Post
+            title={post.title}
+            author={post.author}
+            image={post.mainImage.asset.url}
+            alt="hei"
+            link={post.slug.current}
+          />
         ))}
     </div>
   );
