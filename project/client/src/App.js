@@ -1,10 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Hjem from './pages/Hjem';
 import Nyheter from './pages/Nyheter';
-import OnePost from './components/OnePost';
-import Artikkel from './components/Artikkel';
+import OnePost from './pages/OnePost';
 import Kontakt from './pages/Kontakt';
-import Om from './components/Om';
+import Omoss from './pages/Omoss';
 import Galleri from './pages/Galleri';
 import NavBar from './components/NavBar';
 
@@ -24,9 +23,8 @@ function App() {
           <Route component={Hjem} path="/" exact />
           <Route component={Nyheter} path="/nyheter" />
           <Route component={OnePost} path="/artikkel/:slug" />
-          <Route component={Artikkel} path="/artikkel" />
           <Route component={Kontakt} path="/kontakt" />
-          <Route component={Om} path="/om" />
+          <Route component={Omoss} path="/Omoss" />
           <Route component={Galleri} path="/galleri" />
         </Switch>
       </BrowserRouter>
