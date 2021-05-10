@@ -24,6 +24,11 @@ export default {
       to: {type: 'author'},
     },
     {
+      name: 'imageAlt',
+      title: 'Main image alternative text',
+      type: 'string',
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
