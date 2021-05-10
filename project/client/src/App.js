@@ -8,8 +8,6 @@ import Galleri from './pages/Galleri';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
-import './styles/all.scss';
-
 /**
  * Importerer Routes her da den "styrer" hele applikasjonen
  * Hvis du bruker Styled Components kan du også beholde Theme her (se inne i /styles/Theme.js)

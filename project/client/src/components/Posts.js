@@ -11,11 +11,14 @@ export default function Posts() {
         `*[_type == "post"]{
         title,
         slug,
+        'author': author->name,
+        imageAlt,
+        'categories': categories->name,
         mainImage{
           asset->{
           _id,
           url
-        }
+        },
       }
     }`
       )
@@ -24,15 +27,15 @@ export default function Posts() {
   }, []);
 
   return (
-    <div>
+    <div className="posts">
       {allPostsData &&
         allPostsData.map((post) => (
           <Post
             title={post.title}
-            author={post.author}
             image={post.mainImage.asset.url}
-            alt="hei"
+            alt={post.imageAlt}
             link={post.slug.current}
+            categories={post.categories}
           />
         ))}
     </div>
