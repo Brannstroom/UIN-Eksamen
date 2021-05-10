@@ -8,13 +8,21 @@ export default function NavBar() {
       <img src={logo} width="20%" alt="Game UIN Logo" />
       <div>
         <nav>
-          <NavLink to="/" exact>
+          <NavLink className="navbar" to="/" exact>
             Hjem
           </NavLink>
-          <NavLink to="/Nyheter">Nyheter</NavLink>
-          <NavLink to="/Kontakt">Kontakt oss</NavLink>
-          <NavLink to="/Galleri">Galleri</NavLink>
-          <NavLink to="/Om">Om oss</NavLink>
+          <NavLink className="navbar" to="/Nyheter">
+            Nyheter
+          </NavLink>
+          <NavLink className="navbar" to="/Kontakt">
+            Kontakt oss
+          </NavLink>
+          <NavLink className="navbar" to="/Galleri">
+            Galleri
+          </NavLink>
+          <NavLink className="navbar" to="/Om">
+            Om oss
+          </NavLink>
         </nav>
       </div>
     </header>

@@ -32,6 +32,28 @@ header img {
 }
 
 nav>* {
-    font-size: 30px;
-    margin: 40px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    float: left;
+    border-right: 5% solid $farge4;
+}
+
+.navbar {
+    display: block;
+    text-align: center;
+    color: $farge1;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+.navbar:hover {
+    background-color: $farge1;
+    color: $farge4;
+}
+
+.navbar:active {
+    background-color: $farge4;
+    color: $farge1;
 }
