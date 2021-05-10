@@ -7,5 +7,17 @@ import styled from 'styled-components/macro';
  */
 
 export const Container = styled.section`
-  background-color: pink;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 1200px) {
+    width: 1160px;
+  }
+  @media (min-width: 900px) {
+    width: 960px;
+  }
+  @media (min-width: 780px) {
+    width: 740px;
+  }
 `;
