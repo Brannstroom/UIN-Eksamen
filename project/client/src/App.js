@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Hjem from './components/Hjem';
 import Nyheter from './components/Nyheter';
+import OnePost from './components/OnePost';
 import Artikkel from './components/Artikkel';
 import Kontakt from './components/Kontakt';
 import Om from './components/Om';
@@ -22,7 +23,8 @@ function App() {
         <Switch>
           <Route component={Hjem} path="/" exact />
           <Route component={Nyheter} path="/nyheter" />
-          <Route component={Artikkel} path="/artikkel/:slug" />
+          <Route component={OnePost} path="/artikkel/:slug" />
+          <Route component={Artikkel} path="/artikkel" />
           <Route component={Kontakt} path="/kontakt" />
           <Route component={Om} path="/om" />
           <Route component={Galleri} path="/galleri" />
