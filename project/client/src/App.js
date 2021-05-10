@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Hjem from './components/Hjem';
-import Nyheter from './components/Nyheter';
+import Hjem from './pages/Hjem';
+import Nyheter from './pages/Nyheter';
 import OnePost from './components/OnePost';
 import Artikkel from './components/Artikkel';
-import Kontakt from './components/Kontakt';
+import Kontakt from './pages/Kontakt';
 import Om from './components/Om';
-import Galleri from './components/Galleri';
+import Galleri from './pages/Galleri';
 import NavBar from './components/NavBar';
 
 import './styles/all.scss';
