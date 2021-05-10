@@ -5,7 +5,9 @@ import logo from '../images/gameuin.png';
 export default function NavBar() {
   return (
     <header>
-      <img src={logo} width="20%" alt="Game UIN Logo" />
+      <NavLink to="/" exact>
+        <img src={logo} width="20%" alt="Game UIN Logo" />
+      </NavLink>
       <div>
         <nav>
           <NavLink className="navbar" to="/" exact>
