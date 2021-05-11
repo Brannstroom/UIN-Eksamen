@@ -1,3 +1,36 @@
+@import './all.scss';
+
+.post {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 4px solid;
+    width: 31%;
+}
+
+.post h3,
+p {
+    margin-left: 10px;
+}
+
+.post img {
+    max-width: 100%;
+}
+
+.loadMoreButton {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.loadMoreButton button {
+    width: 98.5%;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    background: $farge1;
+    margin: 7px;
+}
+
 .mid {
     margin-left: 1200px;
     align-items: center;
@@ -144,4 +177,10 @@ input:focus+.switch-left+.switch-right {
 
 input:checked:focus+.switch-left+.switch-right {
     color: #333;
+}
+
+input:checked+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
 }
