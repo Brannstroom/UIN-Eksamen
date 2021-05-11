@@ -1,10 +1,10 @@
 import React from 'react';
 import Photos from '../components/Photos';
 
+// bruker 3 forkjellige classnames i css
 export default function Galleri() {
   return (
-    <div>
-      <h1>galleri side smil</h1>
+    <div className="galleriPhoto">
       <Photos />
     </div>
   );
