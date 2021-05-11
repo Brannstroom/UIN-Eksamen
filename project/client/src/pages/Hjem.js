@@ -11,7 +11,6 @@ export default function Hjem() {
     } else {
       setView('gridView');
     }
-    console.log(view);
   }
 
   return (

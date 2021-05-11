@@ -6,21 +6,25 @@ import '../styles/nyheter.scss';
 export default function Posts({ cl }) {
   const [allPostsData, setAllPosts] = useState(null);
   const [postAmount, setPostAmount] = useState(12);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const loadMore = () => {
     setPostAmount((previousValue) => previousValue + 6);
   };
 
   useEffect(() => {
+    setLoading(true);
     sanityClient
       .fetch(
         `*[_type == "post"]{
+        _id,
         title,
         slug,
         'author': author->name,
         imageAlt,
         'category': category->title,
-        body,
+        bodyShort,
         mainImage{
           asset->{
           _id,
@@ -29,14 +33,18 @@ export default function Posts({ cl }) {
         }
       }`
       )
-      .then((data) => setAllPosts(data))
-      .catch(console.error);
+      .then((data) => {
+        setLoading(false);
+        setAllPosts(data);
+      })
+      .catch((error) => {
+        setError(error);
+        console.log(error);
+      });
   }, []);
 
-  function handleBody(body) {
-    console.log(body);
-    return body;
-  }
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>error?.message</p>;
 
   return (
     <div className={cl}>
@@ -45,12 +53,13 @@ export default function Posts({ cl }) {
           .slice(0, postAmount)
           .map((post) => (
             <Post
+              key={post._id}
               category={post.category}
               title={post.title}
               image={post.mainImage.asset.url}
               alt={post.imageAlt}
               link={post.slug.current}
-              body={handleBody(post.body)}
+              body={post.bodyShort}
             />
           ))}
       <div className="loadMoreButton">

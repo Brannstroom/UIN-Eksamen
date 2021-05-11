@@ -2,7 +2,11 @@ const Author = ({ name, image, alt, rolle, bio }) => (
   <div className="authordiv">
     <div className="authorOne">
       <div className="authorFacePhoto">
-        <img style={{ width: '100%', border: '2px solid'}} src={image} alt={alt} />
+        <img
+          style={{ width: '100%', border: '2px solid' }}
+          src={image}
+          alt={alt}
+        />
       </div>
     </div>
     <div className="authorTwo">
