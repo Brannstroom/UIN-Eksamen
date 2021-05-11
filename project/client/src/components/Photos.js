@@ -5,12 +5,15 @@ import Photo from './Photo';
 export default function Posts() {
   const [allPhotosData, setAllPhotos] = useState(null);
   const [photoLimit, setPhotoLimit] = useState(3);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const morePictures = () => {
     setPhotoLimit((previousValue) => previousValue + 3);
   };
 
   useEffect(() => {
+    setLoading(true);
     sanityClient
       .fetch(
         `*[_type == "galleri"]{
@@ -19,8 +22,11 @@ export default function Posts() {
     }`
       )
       .then((data) => setAllPhotos(data))
-      .catch(console.error);
+      .catch(setError(error));
   }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (!error) return <p>error?.message</p>;
 
   return (
     <div>
