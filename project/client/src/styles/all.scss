@@ -127,7 +127,7 @@ li a {
     margin-right: 10px;
 }
 
-.introOmOss{
+.introOmOss, .introGalleri{
     text-align: center;
     h2{
         font-size: 150%;
@@ -145,7 +145,7 @@ li a {
     padding: 0% 0% 3% 0%;
 }
 
-.omOss>* {
+.omOss, .galleriPhoto>* {
     box-sizing: border-box;
     margin: 0; 
     margin-left: auto;
@@ -183,7 +183,7 @@ li a {
     }
 }
 
-.introContact, .authorbiocss{
+.introContact, .introGalleri, .authorbiocss{
     text-align: center;
     h2{
       font-size: 150%;
@@ -262,4 +262,23 @@ li a {
     margin: 2%;
     margin-left: 3%;
     margin-right: 3%;
+}
+
+.photo{
+    float: left;
+    margin: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    img{
+        width: 210px; 
+        height: 210px; 
+        object-fit: cover;
+    }
+}
+
+.photos:after {
+    max-width: 100%;
+    content: "";
+    display: table;
+    clear: both;
 }
