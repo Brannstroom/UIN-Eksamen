@@ -48,6 +48,11 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'bodyShort',
+      title: 'Brødtekst',
+      type: 'text',
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',

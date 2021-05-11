@@ -21,12 +21,18 @@ export default function Posts() {
         galleriImageAlt
     }`
       )
-      .then((data) => setAllPhotos(data))
-      .catch(setError(error));
+      .then((data) => {
+        setLoading(false);
+        setAllPhotos(data);
+      })
+      .catch((error) => {
+        setError(error);
+        console.log(error);
+      });
   }, []);
 
   if (loading) return <p>Loading...</p>;
-  if (!error) return <p>error?.message</p>;
+  if (error) return <p>error?.message</p>;
 
   return (
     <div>

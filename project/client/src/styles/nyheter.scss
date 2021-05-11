@@ -16,6 +16,7 @@
     margin: 0 auto;
     margin-bottom: 10px;
     border: 4px solid;
+    height: fit-content;
 }
 
 .gridView .post {
@@ -23,16 +24,13 @@
     margin-bottom: 10px;
     border: 4px solid;
     width: 31%;
+    height: fit-content;
 }
 
 .gridView .post h3,
-.gridView p {
-    margin-left: 10px;
-}
-
+.gridView p,
 .listView .post h3,
 .listView p {
-    float: right;
     margin-left: 10px;
 }
 
@@ -41,25 +39,32 @@
 }
 
 .listView .post img {
-    float: left;
-    max-width: 30%;
+    max-width: 35%;
+}
+
+.listView .postContent {
+    float: right;
+    text-align: left;
+    max-width: 60%;
+    margin-right: 10px;
 }
 
 .gridView .arrangement {
     color: white;
     margin-left: 0px;
     margin-top: -3px;
-    width: 100%;
+    width: 98.6%;
     padding: 3px;
     text-align: center;
     font-size: 18px;
+    margin-bottom: -1px;
 }
 
 .listView .arrangement {
     color: white;
     margin-left: 0px;
     margin-top: -3px;
-    width: 29.6%;
+    width: 34.5%;
     padding: 3px;
     text-align: center;
     font-size: 18px;
@@ -79,14 +84,6 @@
 
 #Turneringer {
     background-color: darkred;
-}
-
-.blockContent {
-    visibility: hidden;
-}
-
-.blockContent:nth-child(1) {
-    visibility: visible;
 }
 
 .loadMoreButton {
