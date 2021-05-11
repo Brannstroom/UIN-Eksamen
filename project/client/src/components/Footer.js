@@ -20,9 +20,6 @@ export default function Footer() {
                 <a href="/">Hjem</a>
               </li>
               <li>
-                <a href="/Nyheter">Nyheter</a>
-              </li>
-              <li>
                 <a href="/Kontakt">Kontakt Oss</a>
               </li>
               <li>

@@ -1,7 +1,7 @@
 const Author = ({ name, image, alt, rolle, bio }) => (
   <div className="authordiv">
     <div className="authorOne">
-      <div class="authorFacePhoto">
+      <div className="authorFacePhoto">
         <img style={{ width: '100%', border: '2px solid'}} src={image} alt={alt} />
       </div>
     </div>

@@ -6,15 +6,12 @@ export default function NavBar() {
   return (
     <header className="navigationBar">
       <NavLink to="/" exact>
-        <img src={logo} width="20%" alt="Game UIN Logo" />
+        <img className="navimg" src={logo} width="100%" alt="Game UIN Logo" />
       </NavLink>
       <div>
         <nav>
           <NavLink className="navbar" to="/" exact>
             Hjem
-          </NavLink>
-          <NavLink className="navbar" to="/Nyheter">
-            Nyheter
           </NavLink>
           <NavLink className="navbar" to="/Kontakt">
             Kontakt oss
