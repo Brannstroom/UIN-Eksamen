@@ -4,12 +4,12 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'name',
+      name: 'authorName',
       title: 'Name',
       type: 'string',
     },
     {
-      name: 'slug',
+      name: 'authorSlug',
       title: 'Slug',
       type: 'slug',
       options: {
@@ -18,28 +18,33 @@ export default {
       },
     },
     {
-      name: 'rolle',
+      name: 'authorRolle',
       title: 'Rolle',
       type: 'string',
     },
     {
-      name: 'image',
-      title: 'Image',
+      name: 'authorImageAlt',
+      title: 'Main image alternative text',
+      type: 'string',
+    },
+    {
+      name: 'authorImage',
+      title: 'Author Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'bio',
+      name: 'authorBio',
       title: 'Bio',
       type: 'blockContent',
     },
   ],
   preview: {
     select: {
-      title: 'name',
-      media: 'image',
+      title: 'authorName',
+      media: 'authorImage',
     },
   },
 }

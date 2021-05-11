@@ -26,10 +26,16 @@ export default {
           }
       },
       {
-        name: 'attribution',
+        name: 'galleriImageAlt',
         title: 'Alternative text',
         type: 'string',
         description: 'Important for SEO & Universal design',
       },
     ],
+    preview: {
+      select: {
+        title: 'caption',
+        media: 'galleriImage',
+      }
+    }
   }

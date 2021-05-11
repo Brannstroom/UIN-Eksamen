@@ -3,9 +3,8 @@ import Authors from '../components/Authors';
 
 export default function Omoss() {
   return (
-  <div>
-    <h1>Om oss!</h1>
-    <Authors />
-  </div>
-);
+    <div>
+      <Authors />
+    </div>
+  );
 }
