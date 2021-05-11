@@ -36,6 +36,11 @@ export default {
       },
     },
     {
+      name: 'authorTextBio',
+      title: 'Text Bio',
+      type: 'text',
+    },
+    {
       name: 'authorBio',
       title: 'Bio',
       type: 'blockContent',

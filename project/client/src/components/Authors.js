@@ -13,6 +13,7 @@ export default function Authors() {
         `*[_type == "author"][0...5]{
         authorName,
         authorRolle,
+        authorTextBio,
         authorImageAlt,
         'authorImage': authorImage.asset->url
     }`
@@ -69,7 +70,7 @@ export default function Authors() {
             <Author
               name={author.authorName}
               rolle={author.authorRolle}
-              bio={author.authorBio}
+              bio={author.authorTextBio}
               image={author.authorImage}
               alt={author.authorImageAlt}
             />
