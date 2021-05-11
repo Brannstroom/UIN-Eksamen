@@ -1,19 +1,92 @@
 @import './all.scss';
 
-.post {
+.listView {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.gridView {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.listView .post {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 4px solid;
+}
+
+.gridView .post {
     margin: 0 auto;
     margin-bottom: 10px;
     border: 4px solid;
     width: 31%;
 }
 
-.post h3,
-p {
+.gridView .post h3,
+.gridView p {
     margin-left: 10px;
 }
 
-.post img {
+.listView .post h3,
+.listView p {
+    float: right;
+    margin-left: 10px;
+}
+
+.gridView .post img {
     max-width: 100%;
+}
+
+.listView .post img {
+    float: left;
+    max-width: 30%;
+}
+
+.gridView .arrangement {
+    color: white;
+    margin-left: 0px;
+    margin-top: -3px;
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.listView .arrangement {
+    color: white;
+    margin-left: 0px;
+    margin-top: -3px;
+    width: 29.6%;
+    padding: 3px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.postTitle {
+    margin-left: -100px;
+}
+
+#E-Sport {
+    background-color: darkblue;
+}
+
+#Arrangementer {
+    background-color: darkgreen;
+}
+
+#Turneringer {
+    background-color: darkred;
+}
+
+.blockContent {
+    visibility: hidden;
+}
+
+.blockContent:nth-child(1) {
+    visibility: visible;
 }
 
 .loadMoreButton {
@@ -31,8 +104,16 @@ p {
     margin: 7px;
 }
 
+.arrangement:visited {
+    color: white;
+}
+
+.link {
+    text-decoration: none;
+}
+
 .mid {
-    margin-left: 1200px;
+    margin-left: 90%;
     align-items: center;
     justify-content: center;
     padding-top: 1em;
