@@ -145,7 +145,7 @@ li a {
     padding: 0% 0% 3% 0%;
 }
 
-.omOss, .galleriPhoto>* {
+.omOss, .galleriPhoto, .contactPage>* {
     box-sizing: border-box;
     margin: 0; 
     margin-left: auto;
@@ -183,7 +183,7 @@ li a {
     }
 }
 
-.introContact, .introGalleri, .authorbiocss{
+.introContact, .introGalleri{
     text-align: center;
     h2{
       font-size: 150%;
@@ -193,14 +193,6 @@ li a {
       padding: 2% 0% 1% 0%;
     }
   padding: 0% 0% 1% 0%;
-}
-
-
-.contactPage>* {
-    box-sizing: border-box;
-    margin: 0; 
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .contactForm{
@@ -220,6 +212,31 @@ li a {
 }
 
 .contactContent:after{
+    max-width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.authorOne{
+    float: left;
+    width: 20%;
+    margin: 2%;
+    margin-left: 3%;
+}
+
+.authorTwo{
+    float: left;
+    width: 70%;
+    margin: 1%;
+    margin-left: 3%;
+}
+
+.authorbiocss{
+    float: left;
+}
+
+.authors:after, .authordiv:after {
     max-width: 100%;
     content: "";
     display: table;
@@ -255,13 +272,6 @@ li a {
     h4{
         font-size: 70%;
     }
-}
-
-.authordiv{
-    width: 26.33%;
-    margin: 2%;
-    margin-left: 3%;
-    margin-right: 3%;
 }
 
 .photo{
