@@ -4,7 +4,7 @@ import logo from '../images/gameuin.png';
 
 export default function NavBar() {
   return (
-    <header>
+    <header className="navigationBar">
       <NavLink to="/" exact>
         <img src={logo} width="20%" alt="Game UIN Logo" />
       </NavLink>
@@ -22,7 +22,7 @@ export default function NavBar() {
           <NavLink className="navbar" to="/Galleri">
             Galleri
           </NavLink>
-          <NavLink className="navbar" to="/Om">
+          <NavLink className="navbar" to="/Omoss">
             Om oss
           </NavLink>
         </nav>

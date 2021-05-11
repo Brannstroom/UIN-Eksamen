@@ -45,9 +45,10 @@ nav>* {
     color: $farge1;
     padding: 10px 10px;
     margin-top: 5px;
-    margin-left: 70px;
+    margin-left: 3%;
     text-decoration: none;
-    font-size: 150%;
+    font-size: 100%;
+    font-weight: bold;
 }
 
 .navbar:hover {
@@ -58,6 +59,12 @@ nav>* {
 .navbar:active {
     background-color: $farge4;
     color: $farge1;
+}
+
+@media screen and (max-width:800px) {
+    .navbar{
+        width: 100%;
+    }
 }
 
 footer {
@@ -118,4 +125,61 @@ li a {
 
 .footerinfo {
     margin-right: 10px;
+}
+
+.introOmOss{
+    text-align: center;
+    h2{
+        font-size: 150%;
+        margin: auto;
+        border-bottom: 3px solid $farge1;
+        max-width: 15%;
+        padding: 2% 0% 1% 0%;
+    }
+    p{
+        width: 55%;
+        margin: auto;
+        font-size: 90%;
+        padding: 2% 0% 0% 0%;
+    }
+    padding: 0% 0% 3% 0%;
+}
+
+
+.omOss>* {
+    box-sizing: border-box;
+    margin: 0; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.omOssColumn {
+    float: left;
+    width: 26.33%;
+    border-style: solid;
+    border-width: 2px;
+    margin: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.omOssRow:after {
+    max-width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.omOssTema{
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    text-align: center;
+    font-size: 80%;
+    padding: 0% 4%;
+}
+
+@media screen and (max-width:600px) {
+    .omOssColumn{
+        width: 100%;
+    }
 }
