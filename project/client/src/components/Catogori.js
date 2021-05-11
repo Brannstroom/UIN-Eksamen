@@ -1,0 +1,1 @@
+// skal være for knappene som katogoriserer/filterer && som en farge endrer.
