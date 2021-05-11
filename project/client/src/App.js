@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Hjem from './pages/Hjem';
-import Nyheter from './pages/Nyheter';
 import Artikkel from './pages/Artikkel';
 import Kontakt from './pages/Kontakt';
 import Omoss from './pages/Omoss';
@@ -20,7 +19,6 @@ function App() {
         <NavBar />
         <Switch>
           <Route component={Hjem} path="/" exact />
-          <Route component={Nyheter} path="/nyheter" />
           <Route component={Artikkel} path="/artikkel/:slug" />
           <Route component={Kontakt} path="/kontakt" />
           <Route component={Omoss} path="/Omoss" />

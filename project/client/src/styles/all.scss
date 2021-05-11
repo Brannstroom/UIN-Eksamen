@@ -22,15 +22,6 @@ main {
     background-color: $farge4;
 }
 
-header {
-    border-bottom: 3px solid $farge1;
-    height: 60px;
-}
-
-header img {
-    float: left;
-}
-
 nav>* {
     padding: 0;
     margin: 0;
@@ -38,17 +29,27 @@ nav>* {
     float: left;
     border-right: 5% solid $farge4;
 }
+.navigationBar{
+    width: 100%;
+    border-bottom: 3px solid $farge1;
+    height: 60px;;
+}
+.navimg{
+    margin: 15px 15px 0px 15px;
+    width: 150px;
+    float: left;
+}
 
 .navbar {
     display: block;
     text-align: center;
     color: $farge1;
-    padding: 10px 10px;
-    margin-top: 5px;
-    margin-left: 3%;
+    padding: 16px 25px;
+    margin-left: 1%;
     text-decoration: none;
-    font-size: 100%;
+    font-size: 150%;
     font-weight: bold;
+    max-width: 100%;
 }
 
 .navbar:hover {
@@ -56,14 +57,10 @@ nav>* {
     color: $farge4;
 }
 
-.navbar:active {
-    background-color: $farge4;
-    color: $farge1;
-}
-
-@media screen and (max-width:800px) {
+@media screen and (max-width:1075px) {
     .navbar{
-        width: 100%;
+        font-size: 100%;
+        padding: 22px 10px;
     }
 }
 
@@ -270,7 +267,7 @@ li a {
         max-width: 20%;
     }
     h4{
-        font-size: 70%;
+        font-size: 20px;
     }
 }
 

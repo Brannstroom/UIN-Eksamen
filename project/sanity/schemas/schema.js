@@ -11,6 +11,7 @@ import post from './post'
 import author from './author'
 import contactInfo from './Information/contactInfo'
 import image from './Information/image'
+import companylogo from './Information/companylogo'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,6 +27,7 @@ export default createSchema({
     category,
     contactInfo,
     image,
+    companylogo,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
