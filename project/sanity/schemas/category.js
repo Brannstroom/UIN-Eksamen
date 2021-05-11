@@ -15,3 +15,5 @@ export default {
     },
   ],
 }
+
+//må endre den for Om Oss Greia for å få bedre karakter

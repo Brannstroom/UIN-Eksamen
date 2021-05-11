@@ -29,7 +29,7 @@ export default function Footer() {
                 <a href="/Galleri">Galleri</a>
               </li>
               <li>
-                <a href="/Om">Om Oss</a>
+                <a href="/Omoss">Om Oss</a>
               </li>
             </ul>
           </div>

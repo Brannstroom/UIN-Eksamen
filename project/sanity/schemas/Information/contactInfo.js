@@ -16,6 +16,11 @@ export default {
       //Hotspot option, yes? no?
     },
     {
+      name: 'iconAlt',
+      title: 'icon alternative text',
+      type: 'string',
+    },
+    {
       name: 'href',
       title: 'Link',
       type: 'url',

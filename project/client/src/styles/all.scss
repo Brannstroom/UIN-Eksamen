@@ -145,7 +145,6 @@ li a {
     padding: 0% 0% 3% 0%;
 }
 
-
 .omOss>* {
     box-sizing: border-box;
     margin: 0; 
@@ -179,7 +178,81 @@ li a {
 }
 
 @media screen and (max-width:600px) {
-    .omOssColumn{
+    .omOssColumn, .contactForm, .contactInfo{
         width: 100%;
+    }
+}
+
+.introContact{
+    text-align: center;
+    h2{
+      font-size: 150%;
+      margin: auto;
+      border-bottom: 3px solid $farge1;
+      max-width: 25%;
+      padding: 2% 0% 1% 0%;
+    }
+  padding: 0% 0% 1% 0%;
+}
+
+
+.contactPage>* {
+    box-sizing: border-box;
+    margin: 0; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactForm{
+    float: left;
+    width: 60%;
+    margin: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.contactInfo{
+    float: left;
+    width: 20%;
+    margin: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.contactContent:after{
+    max-width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.inputForm{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.inputFormInfo{
+    height: 300px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.SocialMediaDiv{
+    img{
+        width: 20%;
+    }
+    h4{
+        float: left;
+        font-size: 100%;
     }
 }
