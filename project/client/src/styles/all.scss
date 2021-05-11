@@ -152,7 +152,7 @@ li a {
     margin-right: auto;
 }
 
-.omOssColumn {
+.omOssColumn{
     float: left;
     width: 26.33%;
     border-style: solid;
@@ -183,7 +183,7 @@ li a {
     }
 }
 
-.introContact{
+.introContact, .authorbiocss{
     text-align: center;
     h2{
       font-size: 150%;
@@ -247,12 +247,19 @@ li a {
     box-sizing: border-box;
 }
 
-.SocialMediaDiv{
+.socialMediaDiv{
+        float: left;
     img{
-        width: 20%;
+        max-width: 20%;
     }
     h4{
-        float: left;
-        font-size: 100%;
+        font-size: 70%;
     }
+}
+
+.authordiv{
+    width: 26.33%;
+    margin: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
 }

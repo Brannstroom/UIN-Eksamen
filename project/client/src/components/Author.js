@@ -1,6 +1,6 @@
 const Author = ({ name, image, alt, rolle, bio }) => (
   <div className="authordiv">
-    <img src={image} alt={alt} />
+    <img style={{width: 150, height: 150, borderRadius: 400/ 2}} src={image} alt={alt} />
     <div className="authorbiocss">
       <h3>{name}</h3>
       <p>{rolle}</p>

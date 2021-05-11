@@ -13,9 +13,8 @@ export default function Authors() {
         `*[_type == "author"][0...5]{
         authorName,
         authorRolle,
-        authorBio,
         authorImageAlt,
-        authorImage
+        'authorImage': authorImage.asset->url
     }`
       )
       .then((data) => setAuthorsData(data))
