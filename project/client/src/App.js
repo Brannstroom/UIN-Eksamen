@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Hjem from './pages/Hjem';
 import Nyheter from './pages/Nyheter';
-import OnePost from './pages/OnePost';
+import Artikkel from './pages/Artikkel';
 import Kontakt from './pages/Kontakt';
 import Omoss from './pages/Omoss';
 import Galleri from './pages/Galleri';
@@ -21,7 +21,7 @@ function App() {
         <Switch>
           <Route component={Hjem} path="/" exact />
           <Route component={Nyheter} path="/nyheter" />
-          <Route component={OnePost} path="/artikkel/:slug" />
+          <Route component={Artikkel} path="/artikkel/:slug" />
           <Route component={Kontakt} path="/kontakt" />
           <Route component={Omoss} path="/Omoss" />
           <Route component={Galleri} path="/galleri" />
