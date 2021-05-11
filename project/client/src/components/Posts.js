@@ -4,11 +4,16 @@ import Post from './Post';
 
 export default function Posts() {
   const [allPostsData, setAllPosts] = useState(null);
+  const [postAmount, setPostAmount] = useState(3);
+
+  const loadMore = () => {
+    setPostAmount((previousValue) => previousValue + 6);
+  };
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"][0...6]{
+        `*[_type == "post"]{
         title,
         slug,
         'author': author->name,
@@ -29,15 +34,22 @@ export default function Posts() {
   return (
     <div className="posts">
       {allPostsData &&
-        allPostsData.map((post) => (
-          <Post
-            title={post.title}
-            image={post.mainImage.asset.url}
-            alt={post.imageAlt}
-            link={post.slug.current}
-            categories={post.categories}
-          />
-        ))}
+        allPostsData
+          .slice(0, postAmount)
+          .map((post) => (
+            <Post
+              title={post.title}
+              image={post.mainImage.asset.url}
+              alt={post.imageAlt}
+              link={post.slug.current}
+              categories={post.categories}
+            />
+          ))}
+      <div className="loadMoreButton">
+        <button type="button" onClick={loadMore}>
+          Last inn fler artikler
+        </button>
+      </div>
     </div>
   );
 }

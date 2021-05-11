@@ -68,7 +68,7 @@ footer {
     box-sizing: border-box;
     margin-top: 1rem;
     padding: 1rem;
-    background-color:$farge4;
+    background-color: $farge4;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -78,29 +78,29 @@ footer {
 }
 
 .divcolumn {
-    float:left;
+    float: left;
     width: 27.33%;
     padding-left: 3%;
     padding-right: 3%;
     font-size: 100%;
 }
 
-.divcenter{
+.divcenter {
     padding-left: 15%;
     padding-right: 10%;
 }
 
-.footerP{
+.footerP {
     padding-top: 5px;
 }
 
-li a{
+li a {
     text-decoration: none;
     color: $farge1;
     font-weight: bolder;
 }
 
-.footerTittel{
+.footerTittel {
     color: $farge1;
     font-size: 20px;
     font-weight: bold;
@@ -108,36 +108,14 @@ li a{
     margin-left: 10%;
 }
 
-.socialLogo{
+.socialLogo {
     padding-top: 8px;
 }
 
-.socialmedia{
+.socialmedia {
     padding-left: 12px;
 }
 
-.footerinfo{
+.footerinfo {
     margin-right: 10px;
-}
-
-.posts {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
-}
-
-.post {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    border: 4px solid;
-    width: 31%;
-}
-
-.post h3,
-p {
-    margin-left: 10px;
-}
-
-.post img {
-    max-width: 100%;
 }
