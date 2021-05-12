@@ -21,6 +21,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'imageId',
+      title: 'Id for image',
+      type: 'number'
+    },
+    {
       name: 'href',
       title: 'Link',
       type: 'url',
@@ -29,4 +34,13 @@ export default {
       })
     },
   ],
+  orderings: [
+    {
+      title: 'Id for image',
+      name: 'imageIdDesc',
+      by: [
+        {field: 'imageId', direction: 'desc'}
+      ]
+    }
+  ]
 }
