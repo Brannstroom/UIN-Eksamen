@@ -29,12 +29,15 @@ nav>* {
     float: left;
     border-right: 5% solid $farge4;
 }
-.navigationBar{
+
+.navigationBar {
     width: 100%;
     border-bottom: 3px solid $farge1;
-    height: 60px;;
+    height: 60px;
+    ;
 }
-.navimg{
+
+.navimg {
     margin: 15px 15px 0px 15px;
     width: 150px;
     float: left;
@@ -58,7 +61,7 @@ nav>* {
 }
 
 @media screen and (max-width:1075px) {
-    .navbar{
+    .navbar {
         font-size: 100%;
         padding: 22px 10px;
     }
@@ -124,32 +127,38 @@ li a {
     margin-right: 10px;
 }
 
-.introOmOss, .introGalleri{
+.introOmOss,
+.introGalleri {
     text-align: center;
-    h2{
+
+    h2 {
         font-size: 150%;
         margin: auto;
         border-bottom: 3px solid $farge1;
         max-width: 15%;
         padding: 2% 0% 1% 0%;
     }
-    p{
+
+    p {
         width: 55%;
         margin: auto;
         font-size: 90%;
         padding: 2% 0% 0% 0%;
     }
+
     padding: 0% 0% 3% 0%;
 }
 
-.omOss, .galleriPhoto, .contactPage>* {
+.omOss,
+.galleriPhoto,
+.contactPage>* {
     box-sizing: border-box;
-    margin: 0; 
+    margin: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
-.omOssColumn{
+.omOssColumn {
     float: left;
     width: 26.33%;
     border-style: solid;
@@ -166,7 +175,7 @@ li a {
     clear: both;
 }
 
-.omOssTema{
+.omOssTema {
     border-style: solid;
     border-width: 2px 0px 0px 0px;
     text-align: center;
@@ -175,24 +184,30 @@ li a {
 }
 
 @media screen and (max-width:600px) {
-    .omOssColumn, .contactForm, .contactInfo{
+
+    .omOssColumn,
+    .contactForm,
+    .contactInfo {
         width: 100%;
     }
 }
 
-.introContact, .introGalleri{
+.introContact,
+.introGalleri {
     text-align: center;
-    h2{
-      font-size: 150%;
-      margin: auto;
-      border-bottom: 3px solid $farge1;
-      max-width: 25%;
-      padding: 2% 0% 1% 0%;
+
+    h2 {
+        font-size: 150%;
+        margin: auto;
+        border-bottom: 3px solid $farge1;
+        max-width: 25%;
+        padding: 2% 0% 1% 0%;
     }
-  padding: 0% 0% 1% 0%;
+
+    padding: 0% 0% 1% 0%;
 }
 
-.contactForm{
+.contactForm {
     float: left;
     width: 60%;
     margin: 2%;
@@ -200,7 +215,7 @@ li a {
     margin-right: 3%;
 }
 
-.contactInfo{
+.contactInfo {
     float: left;
     width: 20%;
     margin: 2%;
@@ -208,39 +223,40 @@ li a {
     margin-right: 3%;
 }
 
-.contactContent:after{
+.contactContent:after {
     max-width: 100%;
     content: "";
     display: table;
     clear: both;
 }
 
-.authorOne{
+.authorOne {
     float: left;
     width: 20%;
     margin: 2%;
     margin-left: 3%;
 }
 
-.authorTwo{
+.authorTwo {
     float: left;
     width: 70%;
     margin: 1%;
     margin-left: 3%;
 }
 
-.authorbiocss{
+.authorbiocss {
     float: left;
 }
 
-.authors:after, .authordiv:after {
+.authors:after,
+.authordiv:after {
     max-width: 100%;
     content: "";
     display: table;
     clear: both;
 }
 
-.inputForm{
+.inputForm {
     width: 100%;
     padding: 12px 20px;
     margin: 4px 0;
@@ -250,7 +266,7 @@ li a {
     box-sizing: border-box;
 }
 
-.inputFormInfo{
+.inputFormInfo {
     height: 300px;
     width: 100%;
     padding: 12px 20px;
@@ -262,24 +278,26 @@ li a {
     resize: none;
 }
 
-.socialMediaDiv{
-        float: left;
-    img{
-        max-width: 20%;
-    }
-    h4{
-        font-size: 20px;
-    }
+.socialMediaDiv img {
+    float: left;
+    margin: 10px;
+    max-width: 20%;
 }
 
-.photo{
+.socialMediaDiv {
+    font-size: 18px;
+    float: right;
+}
+
+.photo {
     float: left;
     margin: 1%;
     margin-left: 2%;
     margin-right: 2%;
-    img{
-        width: 210px; 
-        height: 210px; 
+
+    img {
+        width: 210px;
+        height: 210px;
         object-fit: cover;
     }
 }

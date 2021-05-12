@@ -7,7 +7,7 @@ export default function ContactInfo() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "contactInfo"][0...7]{
+        `*[_type == "contactInfo"][0...7] | order(imageId) {
         contactInfoBio,
         imageId,
         'contactInfoIcon': contactInfoIcon.asset->url,
