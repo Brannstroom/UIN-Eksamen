@@ -5,6 +5,8 @@ const options = {
   dataset: process.env.REACT_APP_SANITY_DATASET_NAME,
   token: process.env.REACT_APP_SANITY_WRITE_TOKEN,
   tame: process.env.REACT_APP_ADD_YOUR_NAME,
+  apiVersion: '2021-03-25',
+  ignoreBrowserTokenWarning: true,
 };
 
 const client = sanityClient({

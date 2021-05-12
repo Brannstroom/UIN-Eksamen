@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import sanityClient from '../client.js';
+import sanityClient from '../utils/client.js';
 
 export default function NavBar() {
   const [navbarLogo, setnavbarLogo] = useState(null);
@@ -8,6 +8,7 @@ export default function NavBar() {
     sanityClient
       .fetch(
         `*[_type == "companyLogo"]{
+          _id,
         'companyIcon': companyIcon.asset->url,
         companyiconAlt
     }`
@@ -22,6 +23,7 @@ export default function NavBar() {
         {navbarLogo &&
           navbarLogo.map((companylogo) => (
             <img
+              key={companylogo._id}
               className="navimg"
               src={companylogo.companyIcon}
               width="100%"

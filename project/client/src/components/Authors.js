@@ -4,7 +4,11 @@ import Author from './Author';
 
 export default function Authors() {
   const [authorsData, setAuthorsData] = useState(null);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    setLoading(true);
     sanityClient
       .fetch(
         `*[_type == "author"][0...5]{
@@ -16,9 +20,18 @@ export default function Authors() {
         'authorImage': authorImage.asset->url
     }`
       )
-      .then((data) => setAuthorsData(data))
-      .catch(console.error);
+      .then((data) => {
+        setLoading(false);
+        setAuthorsData(data);
+      })
+      .catch((error) => {
+        setError(error);
+        console.log(error);
+      });
   }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>error?.message</p>;
 
   return (
     <div className="omOss">
