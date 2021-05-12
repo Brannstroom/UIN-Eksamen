@@ -33,6 +33,16 @@ export default function Kontakt() {
   };
   if (Loading) return <p>Loading...</p>;
 
+  export const Contact = () => {
+    console.log('Contact')
+    return(
+      <div className="contactForm">
+        {/* kontakt info*/}
+      </div>
+    );
+  };
+
+
   return (
     <div className="contactPage">
       <div className="introContact">
