@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ContactInfo from '../components/ContactInfo';
-import sanityClient from '../client.js';
+import createContact from '../utils/contactService';
 
 export default function Kontakt() {
   const [Loading, setLoading] = useState();
@@ -8,13 +8,19 @@ export default function Kontakt() {
   const [email, setemail] = useState();
   const [nummer, setnummer] = useState();
   const [tip, settip] = useState();
+  const [status, setStatus] = useState();
   const onSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    const data = await sanityClient.create().catch((error) => {
-      console.log(error);
-      setLoading(false);
-    });
+
+    createContact(navn, email, nummer, tip)
+      .then(() => {
+        setStatus('Tusen takk for tipset!');
+        setLoading(false);
+      })
+      .catch(() => {
+        setStatus('En feil skjedde');
+      });
 
     console.log(
       `Navn: ${navn}\nEmail: ${email}\nTelefonnummer: ${nummer}\nTips: ${tip} `
@@ -33,18 +39,9 @@ export default function Kontakt() {
   };
   if (Loading) return <p>Loading...</p>;
 
-  export const Contact = () => {
-    console.log('Contact')
-    return(
-      <div className="contactForm">
-        {/* kontakt info*/}
-      </div>
-    );
-  };
-
-
   return (
     <div className="contactPage">
+      <h2>{status}</h2>
       <div className="introContact">
         <h2>Kontakt oss</h2>
       </div>

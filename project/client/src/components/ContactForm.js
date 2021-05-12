@@ -1,8 +1,5 @@
-
-export const ContactForm = () => {
-    return(
-        <form>
-            <input/>
-        </form>
-    )
-}
+export const ContactForm = () => (
+  <form>
+    <input />
+  </form>
+);
