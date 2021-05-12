@@ -24,13 +24,13 @@ export default {
       {
         name: 'tips',
         title: 'Tips',
-        type: 'string',
+        type: 'text',
       },
       
     ],
     preview: {
       select: {
-        title: 'Form', 
+        title: 'navn', 
       },
     },
   }
