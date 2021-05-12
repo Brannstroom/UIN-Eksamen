@@ -1,8 +1,8 @@
-import client from './client';
+import sanityClient from './client';
 
 const createContact = async (navn, email, nummer, tips) => {
   try {
-    const response = await client.create({
+    const response = await sanityClient.create({
       _type: 'kontakt',
       navn,
       email,

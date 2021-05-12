@@ -37,6 +37,7 @@ export default function Kontakt() {
       settip(event.target.value);
     }
   };
+
   if (Loading) return <p>Loading...</p>;
 
   return (
@@ -50,7 +51,7 @@ export default function Kontakt() {
           <form onSubmit={onSubmit}>
             <input
               className="inputForm"
-              value={navn}
+              value={navn || ''}
               onChange={changeinput}
               type="text"
               placeholder="Navn"
@@ -59,7 +60,7 @@ export default function Kontakt() {
             />
             <input
               className="inputForm"
-              value={email}
+              value={email || ''}
               onChange={changeinput}
               type="text"
               placeholder="Email"
@@ -68,7 +69,7 @@ export default function Kontakt() {
             />
             <input
               className="inputForm"
-              value={nummer}
+              value={nummer || ''}
               onChange={changeinput}
               type="number"
               placeholder="Telefon Nummer"

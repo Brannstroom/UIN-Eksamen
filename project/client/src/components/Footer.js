@@ -6,7 +6,7 @@ import twlogo from '../images/twitter.webp';
 import locationlogo from '../images/location.webp';
 import maillogo from '../images/mail.webp';
 import phonelogo from '../images/phone.webp';
-import sanityClient from '../client.js';
+import sanityClient from '../utils/client.js';
 
 export default function Footer() {
   const [navbarLogo, setnavbarLogo] = useState(null);
@@ -14,6 +14,7 @@ export default function Footer() {
     sanityClient
       .fetch(
         `*[_type == "companyLogo"]{
+          _id,
         'companyIcon': companyIcon.asset->url,
         companyiconAlt
     }`
@@ -48,6 +49,7 @@ export default function Footer() {
           {navbarLogo &&
             navbarLogo.map((companylogo) => (
               <img
+                key={companylogo._id}
                 src={companylogo.companyIcon}
                 width="40%"
                 alt="companyiconAlt"
