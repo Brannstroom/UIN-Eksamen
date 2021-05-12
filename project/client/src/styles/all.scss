@@ -245,7 +245,7 @@ li a {
     padding: 12px 20px;
     margin: 4px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid $farge1;
     border-radius: 8px;
     box-sizing: border-box;
 }
@@ -256,9 +256,10 @@ li a {
     padding: 12px 20px;
     margin: 4px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid $farge1;
     border-radius: 8px;
     box-sizing: border-box;
+    resize: none;
 }
 
 .socialMediaDiv{

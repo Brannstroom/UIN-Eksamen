@@ -9,6 +9,7 @@ export default function ContactInfo() {
       .fetch(
         `*[_type == "contactInfo"][0...7]{
         contactInfoBio,
+        imageId,
         'contactInfoIcon': contactInfoIcon.asset->url,
         iconAlt
     }`
