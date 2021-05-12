@@ -1,5 +1,4 @@
-import React from 'react';
-import logo from '../images/gameuin.png';
+import React, { useEffect, useState } from 'react';
 import fblogo from '../images/facebook.png';
 import iglogo from '../images/instagram.png';
 import lilogo from '../images/linkedIn.png';
@@ -7,8 +6,22 @@ import twlogo from '../images/twitter.png';
 import locationlogo from '../images/location.png';
 import maillogo from '../images/mail.png';
 import phonelogo from '../images/phone.png';
+import sanityClient from '../client.js';
 
 export default function Footer() {
+  const [navbarLogo, setnavbarLogo] = useState(null);
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "companyLogo"]{
+        'companyIcon': companyIcon.asset->url,
+        companyiconAlt
+    }`
+      )
+      .then((data) => setnavbarLogo(data))
+      .catch(console.error);
+  }, []);
+
   return (
     <footer>
       <div className="footerbox">
@@ -32,7 +45,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="divcolumn">
-          <img src={logo} width="30%" alt="Game UIN Logo" />
+          {navbarLogo &&
+            navbarLogo.map((companylogo) => (
+              <img
+                src={companylogo.companyIcon}
+                width="40%"
+                alt="companyiconAlt"
+              />
+            ))}
           <p className="footerP">
             Gamer UIN er en blog som skriver saker og artikkeler som angår
             temaer rundt spill, arrangementer, turneringer, osv.

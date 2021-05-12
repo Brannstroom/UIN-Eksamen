@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'featured',
+      title: 'Featured Tekst',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
