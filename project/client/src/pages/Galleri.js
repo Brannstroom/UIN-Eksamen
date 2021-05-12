@@ -5,7 +5,7 @@ import Photos from '../components/Photos';
 export default function Galleri() {
   return (
     <div className="galleriPhoto">
-      <Photos />
+      <Photos className="photos" />
     </div>
   );
 }

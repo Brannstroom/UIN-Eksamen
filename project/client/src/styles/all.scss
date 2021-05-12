@@ -278,15 +278,16 @@ li a {
     resize: none;
 }
 
-.socialMediaDiv img {
-    float: left;
-    margin: 10px;
-    max-width: 20%;
-}
-
 .socialMediaDiv {
-    font-size: 18px;
-    float: right;
+    float: left;
+
+    img {
+        max-width: 20%;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
 }
 
 .photo {
@@ -307,4 +308,30 @@ li a {
     content: "";
     display: table;
     clear: both;
+}
+
+.photos {
+    width: 75%;
+    margin: 0 auto;
+    margin-left: 16%;
+}
+
+.photo {
+    height: fit-content;
+    width: 29%;
+}
+
+.loadMorePhotos {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.loadMorePhotos button {
+    width: 98.5%;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    background: $farge1;
+    margin: 7px;
 }
