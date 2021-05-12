@@ -4,7 +4,11 @@ import SocialMedia from './SocialMedia';
 
 export default function ContactInfo() {
   const [contactInfoData, setContactInfoData] = useState(null);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    setLoading(true);
     sanityClient
       .fetch(
         `*[_type == "contactInfo"][0...7] | order(imageId) {
@@ -14,9 +18,18 @@ export default function ContactInfo() {
         iconAlt
     }`
       )
-      .then((data) => setContactInfoData(data))
-      .catch(console.error);
+      .then((data) => {
+        setLoading(false);
+        setContactInfoData(data);
+      })
+      .catch((error) => {
+        setError(error);
+        console.log(error);
+      });
   }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>error?.message</p>;
 
   return (
     <div className="perContactInfo">
