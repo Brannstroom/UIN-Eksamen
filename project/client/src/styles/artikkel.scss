@@ -1,0 +1,53 @@
+@import './all.scss';
+
+.artikkel {
+    margin: 0 auto;
+}
+
+.artikkelWrapper {
+    background-color: $farge2;
+}
+
+.artikkelHeader {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.artikkelBilde {
+    border: 4px solid;
+    border-radius: 5px;
+}
+
+.artikkelBilde img {
+    width: 100%;
+}
+
+.artikkelBilde p {
+    margin: -3px 0px 0px 0px;
+    padding-left: 5px;
+    height: 25px;
+    font-size: 18px;
+    background-color: $farge3;
+}
+
+.artikkelAuthor {
+    padding-bottom: 1px;
+}
+
+.artikkelAuthor img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.artikkelAuthor p {
+    margin-left: 70px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.artikkelBody {
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px;
+}

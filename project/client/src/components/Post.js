@@ -8,12 +8,12 @@ const Post = ({ title, image, alt, link, category, body, featured }) => (
       <h4 className="postFeatured">{featured}</h4>
       <h3 className="postTitle">{title}</h3>
       <i>{body}</i>
-      <Link to={link}>
+      <Link to={`artikkel/${link}`}>
         <p className="readMore">Les hele saken &gt;&gt;</p>
       </Link>
     </div>
 
-    <Link to={link} className="link">
+    <Link to={`artikkel/${link}`} className="link">
       <img src={image} alt={alt} />
       <p className="arrangement" id={category}>
         {category}
