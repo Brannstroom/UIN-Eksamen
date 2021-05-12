@@ -5,7 +5,7 @@ import '../styles/nyheter.scss';
 
 export default function Posts({ cl }) {
   const [allPostsData, setAllPosts] = useState(null);
-  const [postAmount, setPostAmount] = useState(10);
+  const [postAmount, setPostAmount] = useState(12);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -17,7 +17,7 @@ export default function Posts({ cl }) {
     setLoading(true);
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"] | order(publishedAt desc) {
         _id,
         title,
         slug,
