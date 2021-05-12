@@ -11,6 +11,7 @@ export default function Authors() {
     sanityClient
       .fetch(
         `*[_type == "author"][0...5]{
+          _id,
         authorName,
         authorRolle,
         authorTextBio,
@@ -68,6 +69,7 @@ export default function Authors() {
         {authorsData &&
           authorsData.map((author) => (
             <Author
+              key={author._id}
               name={author.authorName}
               rolle={author.authorRolle}
               bio={author.authorTextBio}

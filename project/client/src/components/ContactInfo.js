@@ -23,6 +23,7 @@ export default function ContactInfo() {
       {contactInfoData &&
         contactInfoData.map((contactInfo) => (
           <SocialMedia
+            key={contactInfo.imageId}
             icon={contactInfo.contactInfoIcon}
             bio={contactInfo.contactInfoBio}
             iconAlt={contactInfo.iconAlt}

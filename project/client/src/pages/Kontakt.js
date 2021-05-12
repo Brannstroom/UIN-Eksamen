@@ -39,6 +39,7 @@ export default function Kontakt() {
               type="text"
               placeholder="Navn"
               name="name"
+              required
             />
             <input
               className="inputForm"
@@ -47,6 +48,7 @@ export default function Kontakt() {
               type="text"
               placeholder="Email"
               name="email"
+              required
             />
             <input
               className="inputForm"
@@ -55,6 +57,7 @@ export default function Kontakt() {
               type="number"
               placeholder="Telefon Nummer"
               name="telefonNummer"
+              required
             />
             <textarea
               className="inputFormInfo"
@@ -63,6 +66,7 @@ export default function Kontakt() {
               type="text"
               placeholder="Nyhetstips"
               name="tip"
+              required
             />
             <input type="submit" />
           </form>
