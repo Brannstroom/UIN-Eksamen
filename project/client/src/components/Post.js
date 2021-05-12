@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 
 const React = require('react');
 
-const Post = ({ title, image, alt, link, category, body }) => (
+const Post = ({ title, image, alt, link, category, body, featured }) => (
   <div className="post">
     <div className="postContent">
+      <h4 className="postFeatured">{featured}</h4>
       <h3 className="postTitle">{title}</h3>
       <i>{body}</i>
       <Link to={link}>
