@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../images/gameuin.png';
+import sanityClient from '../client.js';
 
 export default function NavBar() {
+  const [navbarLogo, setnavbarLogo] = useState(null);
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "companyLogo"]{
+        'companyIcon': companyIcon.asset->url,
+        companyiconAlt
+    }`
+      )
+      .then((data) => setnavbarLogo(data))
+      .catch(console.error);
+  }, []);
+
   return (
     <header className="navigationBar">
       <NavLink to="/" exact>
-        <img className="navimg" src={logo} width="100%" alt="Game UIN Logo" />
+        {navbarLogo &&
+          navbarLogo.map((companylogo) => (
+            <img
+              className="navimg"
+              src={companylogo.companyIcon}
+              width="100%"
+              alt="Game UIN Logo"
+            />
+          ))}
       </NavLink>
       <div>
         <nav>

@@ -1,6 +1,6 @@
 export default {
     name: 'companyLogo',
-    title: 'companyLogo',
+    title: 'Company Logo',
     type: 'document',
     fields: [
           {

@@ -21,6 +21,7 @@ export default function Posts({ cl }) {
         _id,
         title,
         slug,
+        featured,
         'author': author->name,
         imageAlt,
         'category': category->title,
@@ -56,6 +57,7 @@ export default function Posts({ cl }) {
               key={post._id}
               category={post.category}
               title={post.title}
+              featured={post.featured}
               image={post.mainImage.asset.url}
               alt={post.imageAlt}
               link={post.slug.current}

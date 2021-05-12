@@ -69,21 +69,24 @@
     text-align: center;
     font-size: 18px;
 }
+.postFeatured {
+    margin-left: 30px;
+}
 
 .postTitle {
     margin-left: -100px;
 }
 
 #E-Sport {
-    background-color: darkblue;
+    background-color: $farge3;
 }
 
 #Gadgets {
-    background-color: darkgreen;
+    background-color: $farge2;
 }
 
 #Turneringer {
-    background-color: darkred;
+    background-color: $farge6;
 }
 
 .loadMoreButton {

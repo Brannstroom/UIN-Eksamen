@@ -20,9 +20,9 @@ function App() {
         <Switch>
           <Route component={Hjem} path="/" exact />
           <Route component={Artikkel} path="/artikkel/:slug" />
-          <Route component={Kontakt} path="/kontakt" />
+          <Route component={Kontakt} path="/Kontakt" />
           <Route component={Omoss} path="/Omoss" />
-          <Route component={Galleri} path="/galleri" />
+          <Route component={Galleri} path="/Galleri" />
         </Switch>
       </BrowserRouter>
       <Footer />
