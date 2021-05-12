@@ -17,6 +17,7 @@ export default function Posts() {
     sanityClient
       .fetch(
         `*[_type == "galleri"]{
+          _id,
         'galleriImage': galleriImage.asset->url,
         galleriImageAlt
     }`
@@ -52,7 +53,11 @@ export default function Posts() {
           allPhotosData
             .slice(0, photoLimit)
             .map((photo) => (
-              <Photo image={photo.galleriImage} alt={photo.galleriImageAlt} />
+              <Photo
+                key={photo._id}
+                image={photo.galleriImage}
+                alt={photo.galleriImageAlt}
+              />
             ))}
       </div>
       <div className="loadMorePhotos">
