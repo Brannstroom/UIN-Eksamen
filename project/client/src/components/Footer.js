@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import fblogo from '../images/facebook.png';
-import iglogo from '../images/instagram.png';
-import lilogo from '../images/linkedIn.png';
-import twlogo from '../images/twitter.png';
-import locationlogo from '../images/location.png';
-import maillogo from '../images/mail.png';
-import phonelogo from '../images/phone.png';
+import fblogo from '../images/facebook.webp';
+import iglogo from '../images/instagram.webp';
+import lilogo from '../images/linkedIn.webp';
+import twlogo from '../images/twitter.webp';
+import locationlogo from '../images/location.webp';
+import maillogo from '../images/mail.webp';
+import phonelogo from '../images/phone.webp';
 import sanityClient from '../client.js';
 
 export default function Footer() {
