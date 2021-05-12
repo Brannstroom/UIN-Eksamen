@@ -1,10 +1,18 @@
-import client from "./client"
+import client from './client';
 
-export const createContact = async (FormName, FormEmail, FormNumber, FormTip) =>{
-    try {
-        const response = await client.create({_type: 'Form', FormName, FormEmail, FormNumber, FormTip})
-        console.log(response)
-    } catch (error) {
-        throw new Error(error);
-    }
-}
+const createContact = async (navn, email, nummer, tips) => {
+  try {
+    const response = await client.create({
+      _type: 'kontakt',
+      navn,
+      email,
+      nummer,
+      tips,
+    });
+    console.log(response);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export default createContact;

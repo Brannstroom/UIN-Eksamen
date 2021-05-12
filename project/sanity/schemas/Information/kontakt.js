@@ -1,15 +1,15 @@
 export default {
-    name: 'Form',
-    title: 'Form',
+    name: 'kontakt',
+    title: 'Kontakt',
     type: 'document',
     fields: [
       {
-        name: 'FormName',
+        name: 'navn',
         title: 'Name',
         type: 'string',
       },
       {
-        name: 'FormEmail',
+        name: 'email',
         title: 'Email',
         type: 'string',
         options: {
@@ -17,13 +17,13 @@ export default {
         },
       },
       {
-        name: 'FormNumber',
-        title: 'Number',
+        name: 'nummer',
+        title: 'Nummer',
         type: 'string',
       },
       {
-        name: 'FormTip',
-        title: 'Tip',
+        name: 'tips',
+        title: 'Tips',
         type: 'string',
       },
       

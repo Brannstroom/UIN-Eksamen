@@ -12,7 +12,7 @@ import author from './author'
 import contactInfo from './Information/contactInfo'
 import image from './Information/image'
 import companylogo from './Information/companylogo'
-import Form from './Information/Forminfo'
+import kontakt from './Information/kontakt'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,7 +24,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     post,
-    Form,
+    kontakt,
     author,
     category,
     contactInfo,
