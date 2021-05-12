@@ -5,7 +5,7 @@ import '../styles/nyheter.scss';
 
 export default function Posts({ cl }) {
   const [allPostsData, setAllPosts] = useState(null);
-  const [postAmount, setPostAmount] = useState(9);
+  const [postAmount, setPostAmount] = useState(10);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 

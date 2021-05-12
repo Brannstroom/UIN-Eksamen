@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import ContactInfo from '../components/ContactInfo';
+import sanityClient from '../client.js';
 
 export default function Kontakt() {
+  const [Loading, setLoading] = useState();
   const [navn, setnavn] = useState();
   const [email, setemail] = useState();
   const [nummer, setnummer] = useState();
   const [tip, settip] = useState();
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
+    const data = await sanityClient.create().catch((error) => {
+      console.log(error);
+      setLoading(false);
+    });
+
     console.log(
       `Navn: ${navn}\nEmail: ${email}\nTelefonnummer: ${nummer}\nTips: ${tip} `
     );
@@ -23,6 +31,7 @@ export default function Kontakt() {
       settip(event.target.value);
     }
   };
+  if (Loading) return <p>Loading...</p>;
 
   return (
     <div className="contactPage">
