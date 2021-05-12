@@ -40,12 +40,10 @@ export default function Posts() {
       <div className="introGalleri">
         <h2>Galleri</h2>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+          Her i galleriet legger vi ut bilder av ting og tang som vi finner
+          interessant, morsomt eller alt annet som har noe med Game UIN å gjøre.
+          Her kan det brått komme noe om alt innenfor Game UIN, spill og
+          e-sport.
         </p>
       </div>
       <div className="photos">
